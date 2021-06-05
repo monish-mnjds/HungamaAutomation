@@ -32,3 +32,23 @@ class ReadJson:
                       value['Music'], value['Artist'], value['Lyricist'])
                     for key, value in j_obj.items()]
         return list_
+
+    @staticmethod
+    def read_with_unpacking(file):
+        """
+        loading the test data
+        """
+        with open(file) as fileobj:
+            j_obj = json.load(fileobj)
+            data1 = [(value['Email'], value['Password'])
+                    for key, value in j_obj.items()]
+            data2 = [(value['Email'], value['Password'], value['Song'])
+                     for key, value in j_obj.items()]
+            data3 = [(value['Email'], value['Password'],
+                      value['Playlist'], value['Track'], value['Label'],
+                      value['Music'], value['Artist'], value['Lyricist'])
+                     for key, value in j_obj.items()]
+            data4 = [(value['Email'], value['Password'],
+                      value['Playlist'], value['Track'])
+                     for key, value in j_obj.items()]
+        return data1, data2, data3, data4
