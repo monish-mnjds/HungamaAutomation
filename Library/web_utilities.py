@@ -11,6 +11,14 @@ class CommonUtility:
     for reusing mouse and keyboard actions
     """
     @staticmethod
+    def click_on(driver, element):
+        """
+        to click on a element
+        """
+        loc_type, loc_value = element
+        driver.find_element(loc_type, loc_value).click()
+
+    @staticmethod
     def send_and_enter(driver):
         """
         sending and pressing enter
