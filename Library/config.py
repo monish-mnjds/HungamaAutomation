@@ -17,3 +17,10 @@ class Config:
         "automationName": "UiAutomator2",
         "app": 'com.hungama.myplay.activity.5.2.16.apk'
     }
+    DC2 = {
+        "platformName": "Android",
+        "platformVersion": "11.0",
+        "deviceName": "Nexus_6P",
+        "automationName": "UiAutomator2",
+        "app": 'com.hungama.myplay.activity.5.2.16.apk'
+    }
