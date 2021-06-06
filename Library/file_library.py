@@ -21,19 +21,6 @@ class ReadJson:
         return dict_
 
     @staticmethod
-    def read_test_data(file):
-        """
-        loading the test data
-        """
-        with open(file) as fileobj:
-            j_obj = json.load(fileobj)
-            list_ = [(value['Email'], value['Password'], value['Song'],
-                      value['Playlist'], value['Track'], value['Label'],
-                      value['Music'], value['Artist'], value['Lyricist'])
-                    for key, value in j_obj.items()]
-        return list_
-
-    @staticmethod
     def read_with_unpacking(file):
         """
         loading the test data

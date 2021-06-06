@@ -6,7 +6,7 @@ from appium import webdriver
 from Library.config import Config
 
 
-class DriverInit: #pylint: disable=too-few-public-methods
+class DriverInit:
     """
     Fixtures
     """

@@ -8,14 +8,14 @@ from Library.file_library import ReadJson
 from Library.base_fixtures import DriverInit
 
 ReadTestData = ReadJson()
-test_data1, test_data2, test_data3, test_data4 = ReadTestData.read_test_data(Config.TEST_JSON)
+test_data1, test_data2, test_data3, test_data4 = ReadTestData.read_with_unpacking(Config.TEST_JSON)
 
 
 @pytest.mark.parametrize(
     """email, password, playlist, track""",
     test_data4
 )
-@pytest.mark.playlist
+@pytest.mark.tc3
 class TestPlaylist(DriverInit):
     """
     Testing the adding a song to playlist and validating it
